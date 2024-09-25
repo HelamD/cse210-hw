@@ -4,6 +4,13 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Sandbox World!");
+        if (x > y)
+        {
+            Console.WriteLine("Greater");
+        }
+
+        string school = "byu idaho";
+        Console.WriteLine($" i am studying at {school}");
+        
     }
 }
