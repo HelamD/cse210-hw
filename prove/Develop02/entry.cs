@@ -9,9 +9,8 @@ using System;
 
     public Entry(string date, string prompt, string response)
     {
-        _date = date;
-        _promptText = prompt;
-        _entryText = response;
+    
+
     }
 
     public void Display()

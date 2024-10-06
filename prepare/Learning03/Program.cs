@@ -5,18 +5,22 @@ class Program
     static void Main(string[] args)
     {
         
-            public class Account
-            {
-                public List<int> _transactions = new List<int>(); // if we change this to a list...
+        Fraction fraction1 = new Fraction();
+        Console.WriteLine(fraction1.GetFractionString());
+        Console.WriteLine(fraction1.GetDecimalValue());
 
-                public void Deposit(int amount)
-                {
-                    _transactions.Add(amount);
-                }
-            }
 
-                Account savings = new Account();
-                savings._balance = 50; // if we make the change above, this doesn't work anymore!
-                savings.Deposit(100);
-        }
+        Fraction fraction2 = new Fraction(5);
+        Console.WriteLine(fraction2.GetFractionString());
+        Console.WriteLine(fraction2.GetDecimalValue());
+
+        Fraction fraction3 = new Fraction(3, 4);
+        Console.WriteLine(fraction3.GetFractionString());
+        Console.WriteLine(fraction3.GetDecimalValue());
+
+        Fraction fraction4 = new Fraction(1,3);
+        Console.WriteLine(fraction4.GetFractionString());
+        Console.WriteLine(fraction4.GetDecimalValue()); 
+
     }
+}

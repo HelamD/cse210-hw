@@ -32,7 +32,7 @@ class Program
                 string response = Console.ReadLine();
                 string date = DateTime.Now.ToString("yyyy-MM-dd");
 
-                Entry newEntry = new Entry(date, prompt, response);
+                Entry newEntry = new Entry(_date, _promptText, _entryText);
                 journal.AddEntry(newEntry);
             }
 
