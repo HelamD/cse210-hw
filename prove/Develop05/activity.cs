@@ -71,7 +71,7 @@ class Activity
 
             i++;
 
-            if (i > animationString.Count)
+            if (i >= animationString.Count)
             {
                 i = 0;
             }
