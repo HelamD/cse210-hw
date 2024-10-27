@@ -31,7 +31,7 @@ class Program
             else if (answer ==  "3")
             {
                 Console.WriteLine("Starting listing Activity...");
-                Listing listed = new Listing();
+                Listing listed = new Listing(0);
                 listed.RunListing();
             }
 

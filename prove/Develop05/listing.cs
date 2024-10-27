@@ -1,3 +1,5 @@
+
+
 class Listing : Activity
 {
     private List<string> _prompts= new List<string>
@@ -7,7 +9,7 @@ class Listing : Activity
         "List things that make you happy."
     };
 
-    public Listing() : base("Listing Activity", "This activity will help you reflect on the good things in life by listing them.", 60)
+    public Listing(int duration) : base("Listing Activity", "This activity will help you reflect on the good things in life by listing them.", 60)
     {
 
     }
@@ -20,7 +22,7 @@ class Listing : Activity
         Console.WriteLine(_prompts[rand.Next(_prompts.Count)]);
 
         Console.WriteLine("Star listinhg items");
-        SpinnerAnimation();
+        SpinnerAnimation(3);
 
         Console.WriteLine("Type your items (press Enter after each, type 'done' to finish):");
 

@@ -1,4 +1,7 @@
-using System.Data;
+
+using System;
+using System.Collections.Generic;
+using System.Threading;
 
 class Activity
 {
@@ -8,7 +11,7 @@ class Activity
 
 
 
-    public Activity(string name, string description, int duration)
+    public Activity(string name, string description, int duration = 0)
     {
         _name = name;
         _description = description;
@@ -28,12 +31,12 @@ class Activity
         }
 
         Console.WriteLine("Get ready...");
-        SpinnerAnimation();
+        SpinnerAnimation(3);
 
 
     }
 
-    protected void SpinnerAnimation()
+    protected void SpinnerAnimation(int seconds)
     {      
         List<string> animationString = new List<string>();
         {
@@ -76,7 +79,7 @@ class Activity
     public void EndMessage()
     {
         Console.WriteLine($"Good job! You've completed the {_name} activity for {_duration} seconds.");
-         SpinnerAnimation();
+         SpinnerAnimation(2);
         
     }
 }

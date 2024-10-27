@@ -14,9 +14,9 @@ class Breathing : Activity
         {
 
             Console.WriteLine("breath in...");
-            SpinnerAnimation();
+            SpinnerAnimation(3);
             Console.WriteLine("breath out...");
-            SpinnerAnimation();
+            SpinnerAnimation(3);
 
         }
 
