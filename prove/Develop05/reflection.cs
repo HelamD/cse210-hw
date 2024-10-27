@@ -21,7 +21,7 @@ class Reflection : Activity
 
         Random rand = new Random();
         Console.WriteLine(_prompts[rand.Next(_prompts.Count)]); // Pick a random reflection prompt
-        SpinnerAnimation(3); // Pause after prompt
+        SpinnerAnimation(); // Pause after prompt
 
         EndMessage();
     }

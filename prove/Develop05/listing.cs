@@ -20,7 +20,7 @@ class Listing : Activity
         Console.WriteLine(_prompts[rand.Next(_prompts.Count)]);
 
         Console.WriteLine("Star listinhg items");
-        SpinnerAnimation(3);
+        SpinnerAnimation();
 
         Console.WriteLine("Type your items (press Enter after each, type 'done' to finish):");
 
