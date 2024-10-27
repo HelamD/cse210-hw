@@ -1,3 +1,5 @@
+using System.Data;
+
 class Activity
 {
     private string _name;
@@ -26,36 +28,63 @@ class Activity
         }
 
         Console.WriteLine("Get ready...");
-        SpinnerAnimation(5);
+        SpinnerAnimation();
 
 
     }
 
-    protected void SpinnerAnimation(int seconds)
-    {
-        for (int i = 0; i < seconds *4; i++)
+    protected void SpinnerAnimation()
+    {      
+        List<string> animationString = new List<string>();
         {
-            Console.WriteLine("|");
-            System.Threading.Thread.Sleep(250);
-            Console.WriteLine("\b/");
-            System.Threading.Thread.Sleep(250);
-            Console.WriteLine("\b -");
-            System.Threading.Thread.Sleep(250);
-            Console.WriteLine("\b\\");
-            System.Threading.Thread.Sleep(250);
+            animationString.Add("|");
+            animationString.Add("/");
+            animationString.Add("-");
+            animationString.Add("\\");
+            animationString.Add("|");
+            animationString.Add("-");
         }
-    }
 
+
+        foreach (string animation in animationString )
+        {
+            
+            Console.Write(animation);
+            Thread.Sleep(1000);
+            Console.Write("\b \b");
+        }
+        DateTime startTime = DateTime.Now;
+        DateTime endTime = startTime.AddSeconds(30);
+
+        int i = 0;
+
+        while (DateTime.Now < endTime)
+        {
+            string s = animationString[i];
+            Console.Write(".");
+            Thread.Sleep(1000);
+
+            i++;
+
+            if (i > animationString.Count)
+            {
+                i = 0;
+            }
+        }
+    }    
 
     public void EndMessage()
     {
-         Console.WriteLine($"Good job! You've completed the {_name} activity for {_duration} seconds.");
-         SpinnerAnimation(3);
+        Console.WriteLine($"Good job! You've completed the {_name} activity for {_duration} seconds.");
+         SpinnerAnimation();
+        
     }
+}
+
+
 
     
 
 
 
 
-}
