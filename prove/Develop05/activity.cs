@@ -46,6 +46,8 @@ class Activity
             animationString.Add("\\");
             animationString.Add("|");
             animationString.Add("-");
+            animationString.Add("\\");
+            animationString.Add("|");
         }
 
 
